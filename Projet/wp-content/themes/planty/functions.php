@@ -1,13 +1,17 @@
 <?php
+add_action( 'wp_enqueue_scripts', 'theme_enqueue_styles' );
 
-function oceanwp_child_enqueue_parent_style() {
-	// Dynamically get version number of the parent stylesheet (lets browsers re-cache your stylesheet when you update your theme)
-	$theme   = wp_get_theme( 'OceanWP' );
-	$version = $theme->get( 'Version' );
-	// Load the stylesheet
-	wp_enqueue_style( 'child-style', get_stylesheet_directory_uri() . '/style.css?t='.time(), array( 'oceanwp-style' ), $version );
-
+function theme_enqueue_styles() {
+	wp_enqueue_style( 'parent-style', get_template_directory_uri() . '/style.css' );
 }
-add_action( 'wp_enqueue_scripts', 'oceanwp_child_enqueue_parent_style' );
+
+
+if ( is_user_logged_in() ) {
+    // Afficher l'onglet admin
+    if ( current_user_can( 'manage_options' ) ) {
+        echo '<a href="' . admin_url() . '">Admin</a>';
+    }
+}
+
 
 ?>

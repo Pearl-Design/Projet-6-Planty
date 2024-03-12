@@ -4,12 +4,15 @@ Theme Name: Planty
 
 Description: boissons énergisantes à base de plantes
 
-Template: OceanWP
+Template: BlankSlate
 
 Version: 1.0.1
 
 */
 
+.header{
+	display: none!important
+}
 
 /*VERSION RESPONSIVE*/
 
