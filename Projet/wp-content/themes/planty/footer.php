@@ -1,10 +1,5 @@
 <footer>
-<?php
-wp_nav_menu(array(
-    'menu' => 'footer',
-    'menu_id' => 'menu-footer',
-));
-?>
+<a href="Projet-6-Planty/Projet/">Mentions légales</a>
 
 
 </footer>
