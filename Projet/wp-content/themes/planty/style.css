@@ -10,7 +10,9 @@ Version: 1.0.1
 
 */
 /*STYLE GENERIQUE*/
-html{margin: 0!important}
+html {
+  margin: 0 !important
+}
 * {
   margin: 0;
   padding: 0;
@@ -19,7 +21,9 @@ html{margin: 0!important}
 li {
   list-style: none
 }
-ul{margin:0!important}
+ul {
+  margin: 0 !important
+}
 /*MENU*/
 header > a {
   padding: 25px 0 25px 37px;
@@ -28,16 +32,16 @@ header, header nav ul {
   display: flex;
   justify-content: space-between
 }
-header nav ul li a{
+header nav ul li a {
   padding: 25px 0px;
-	display: block
+  display: block
 }
 header nav ul li.menu-admin {
   margin-left: 50px
 }
 header nav ul li.current_page_item a, header nav ul li a:hover {
-  font-weight: 700!important;
-	color:#000
+  font-weight: 700 !important;
+  color: #000
 }
 header nav ul li:last-child a {
   background-color: #DC9F96;
@@ -48,6 +52,16 @@ header nav ul li:last-child a {
   color: #fff;
   font-weight: 700;
   line-height: 19px;
+}
+/*ACCUEIL*/
+.les-gouts > div > div {
+  height: 263px;
+  width: 100%
+}
+.les-gouts > div > div > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 /*FOOTER*/
 footer nav ul li {
