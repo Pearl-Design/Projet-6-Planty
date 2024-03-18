@@ -63,10 +63,6 @@ header nav ul li:last-child a {
   justify-content: center;
   align-items: center;
 }
-.bloc-pensent > div > div{
-	display: flex!important;
-	justify-content: space-between!important
-}
 /*FOOTER*/
 footer nav ul li {
   text-align: center;
