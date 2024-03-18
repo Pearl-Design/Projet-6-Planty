@@ -29,8 +29,8 @@ header > a {
   padding: 25px 0 25px 37px;
 }
 header, header nav ul {
-  display: flex!important;
-  justify-content: space-between!important
+  display: flex !important;
+  justify-content: space-between !important
 }
 header nav ul li a {
   padding: 25px 0px;
@@ -62,6 +62,51 @@ header nav ul li:last-child a {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+/*NOUS CONTACTER*/
+#wpcf7-f1454-p776-o1 {
+  background: url(/Projet-6-Planty/Projet/wp-content/uploads/2024/03/fleur-1.png) no-repeat 35% 96%;
+  background-size: 15%
+}
+.wpcf7-form {
+  width: 383px;
+  margin: 0 auto;
+}
+.wpcf7-form label {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24px;
+  display: block;
+  text-align: left;
+}
+form.wpcf7-form input, .wpcf7-form textarea {
+  height: 70px;
+  border-radius: 7px;
+  border: none;
+  box-shadow: 0px 4px 14px 0px #0000000A;
+  background-color: #fff;
+	margin-top: 15px
+}
+.wpcf7-form textarea {
+  height: 237px;
+  resize: none;
+}
+.wpcf7-form p {
+  text-align: center
+}
+.wpcf7-form input[type=submit] {
+  width: 198px;
+  height: 55px;
+  border-radius: 5;
+  background-color: #E0B9B4;
+  font-size: 15px;
+  font-weight: 400;
+  text-transform: capitalize;
+  letter-spacing: 0;
+  box-shadow: none
+}
+.wpcf7-form input[type=submit]:hover {
+  background-color: #C02E44
 }
 /*FOOTER*/
 footer nav ul li {
