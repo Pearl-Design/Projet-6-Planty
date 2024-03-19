@@ -9,25 +9,33 @@
 <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
-<header>
-        <!-- Logo cliquable redirigeant vers la page d'accueil -->
-        <a href="<?php echo esc_url(home_url('/')); ?>" rel="home">
-            <?php
-            // Chemin du dossier d'uploads
-            $upload_dir = wp_upload_dir();
-            // Chemin complet de l'image du logo
-            $logo_path = $upload_dir['baseurl'] . '/2024/03/Logo-planty.png';
-            ?>
-            <img src="<?php echo esc_url($logo_path); ?>" alt="Logo planty" width="201" height="19">
-        </a>
+<header class="header">
+    <!-- Logo cliquable redirigeant vers la page d'accueil -->
+    <a href="<?php echo esc_url(home_url('/')); ?>" rel="home">
+        <?php
+        // Chemin du dossier d'uploads
+        $upload_dir = wp_upload_dir();
+        // Chemin complet de l'image du logo
+        $logo_path = $upload_dir['baseurl'] . '/2024/03/Logo-planty.png';
+        ?>
+        <img src="<?php echo esc_url($logo_path); ?>" alt="Logo planty" width="201" height="19">
+    </a>
 
-<?php
-wp_nav_menu(array(
-    'menu' => 'menu', // Remplacez 'menu-planty' par le nom de votre menu personnalisé
-    'menu_id' => 'menu-header',
-    'container' => 'nav',
-    'container_class' => 'menu-header-container',
-    'menu_class' => 'menu-header-list',
-));
-?>
+    <div class="burger-menu-toggle">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
+
+    <?php
+    wp_nav_menu(array(
+        'menu' => 'menu', // Remplacez 'menu-planty' par le nom de votre menu personnalisé
+        'menu_id' => 'menu-header',
+        'container' => 'nav',
+        'container_class' => 'menu-header-container',
+        'menu_class' => 'menu-header-list',
+    ));
+    ?>
 </header>
+
+

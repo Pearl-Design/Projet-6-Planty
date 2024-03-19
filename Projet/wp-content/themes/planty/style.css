@@ -31,12 +31,23 @@ ul {
   --rouge-bordeaux: #C02E44;
 }
 /*MENU*/
+.burger-menu-toggle {
+  display: none;
+  cursor: pointer;
+}
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: var(--rose-corail);
+  margin: 5px 0;
+  transition: background-color 0.3s ease;
+}
 header > a {
   padding: 25px 0 25px 37px;
 }
-header, header nav ul {
-  display: flex !important;
-  justify-content: space-between !important
+header.header, header nav ul {
+  display: flex;
+  justify-content: space-between
 }
 header nav ul li a {
   padding: 25px 0px;
@@ -126,7 +137,7 @@ form input[type=submit]:hover {
   font-weight: 700;
   line-height: 36px;
   color: var(--white);
-	margin: 0
+  margin: 0
 }
 .form-commande-planty .form-commande {
   border-bottom: solid 1px var(--white);
@@ -187,7 +198,7 @@ input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-i
 .form-commande-planty .form-info-livraison .form-info {
   border-right: solid 1px var(--white);
   padding-right: 45px;
-	margin-right: 45px
+  margin-right: 45px
 }
 .form-commande-planty .form-info-livraison label {
   font-size: 20px;
@@ -203,23 +214,22 @@ input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-i
   background-color: var(--white);
   font-size: 18px;
 }
-.form-commande-planty .form-info-livraison h2{
-	margin-bottom: 10px
+.form-commande-planty .form-info-livraison h2 {
+  margin-bottom: 10px
 }
 .form-commande-planty .form-info-livraison p {
   margin: 0
 }
-.bt-commander{
-	text-align: center;
-	margin: 45px 0 80px 0
+.bt-commander {
+  text-align: center;
+  margin: 45px 0 80px 0
 }
-
 /*FOOTER*/
-footer nav ul li {
+footer ul li {
   text-align: center;
   padding: 20px 0
 }
-footer nav ul li a {
+footer ul li a {
   font-size: 16px;
   font-weight: 400;
   line-height: 19px;
@@ -227,6 +237,78 @@ footer nav ul li a {
   color: var(--black)
 }
 /*VERSION RESPONSIVE*/
-@media only screen and (max-width: 990px) {}
-@media only screen and (max-width: 768px) {}
-@media only screen and (max-width: 480px) {}
+@media only screen and (max-width: 768px) {
+  .menu-header-list {
+    display: none;
+  }
+  .burger-menu-toggle {
+    display: block;
+    margin-right: 30px;
+    margin-top: 20px;
+  }
+  .burger-menu-toggle.active .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+  .burger-menu-toggle.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .burger-menu-toggle.active .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+  nav {
+    position: fixed;
+    z-index: 1;
+    top: 69px;
+    left: 0;
+    width: 100%
+  }
+  header nav ul li a {
+    background-color: var(--white);
+    border-top: solid 1px var(--rose-corail)
+  }
+  header nav ul li:last-child a, header nav ul li.menu-admin {
+    margin: 0
+  }
+  header nav ul li {
+    text-align: center
+  }
+  #wpcf7-f1454-p776-o1 {
+    background: transparent
+  }
+  .form-commande-planty .form-commande .container, .form-commande-planty .form-info-livraison {
+    display: flex;
+    flex-direction: column
+  }
+  .form-commande-planty .form-commande .container .produit p + p {
+    font-size: 50px;
+    line-height: 60px
+  }
+  .form-commande-planty .form-commande .container .produit {
+    width: 70%;
+    margin: 0 auto;
+  }
+  .form-commande-planty .form-info-livraison .form-info {
+    border-right: none;
+    padding-right: 0;
+    margin-right: 0;
+  }
+}
+@media only screen and (max-width: 480px) {
+  footer ul li {
+    padding: 10px 0
+  }
+  .form-contacter {
+    width: 80%;
+  }
+  .form-commande-planty .form-commande .container .produit {
+    width: 100%;
+  }
+  .form-commande-planty h2 {
+    font-size: 25px;
+    line-height: 28px
+  }
+  .form-commande-planty .form-commande .container .produit p + p {
+    font-size: 40px;
+    line-height: 50px
+  }
+}
