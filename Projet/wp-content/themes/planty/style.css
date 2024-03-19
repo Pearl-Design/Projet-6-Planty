@@ -92,7 +92,7 @@ form .form-contacter input, .form-contacter textarea {
   border: none;
   box-shadow: 0px 4px 14px 0px #0000000A;
   background-color: var(--white);
-  ;
+  font-size: 18px;
   margin-top: 15px
 }
 .form-contacter textarea {
@@ -102,10 +102,10 @@ form .form-contacter input, .form-contacter textarea {
 .form-contacter p {
   text-align: center
 }
-.form-contacter input[type=submit] {
+form input[type=submit] {
   width: 198px;
   height: 55px;
-  border-radius: 5;
+  border-radius: 5px;
   background-color: var(--rose-corail);
   ;
   font-size: 15px;
@@ -114,7 +114,7 @@ form .form-contacter input, .form-contacter textarea {
   letter-spacing: 0;
   box-shadow: none
 }
-.form-contacter input[type=submit]:hover {
+form input[type=submit]:hover {
   background-color: var(--rouge-bordeaux)
 }
 /*COMMANDER*/
@@ -125,14 +125,95 @@ form .form-contacter input, .form-contacter textarea {
   font-size: 30px;
   font-weight: 700;
   line-height: 36px;
-	color:var(--white);
-	margin:40px 0
+  color: var(--white);
+	margin: 0
 }
-.form-commande-planty .form-commande .container{
-	display:grid;
-	 grid-template-columns: 1fr 1fr 1fr 1fr;
-	grid-gap: 25px;
+.form-commande-planty .form-commande {
+  border-bottom: solid 1px var(--white);
+  padding-bottom: 20px;
+  padding-top: 40px
 }
+.form-commande-planty .form-commande .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 25px;
+  margin: 40px 0 0 0;
+  max-width: 100%;
+}
+.form-commande-planty .form-commande .container > div {
+  text-align: center
+}
+.form-commande-planty .form-commande .container .produit {
+  position: relative;
+}
+.form-commande-planty .form-commande .container .produit p + p {
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 24px;
+  color: var(--white);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  align-items: center;
+}
+input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.form-commande-planty .form-commande input[type="number"] {
+  -moz-appearance: textfield;
+  width: 39px;
+  height: 56px;
+  background-color: var(--white);
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 19px;
+  text-align: center;
+  padding: 0;
+  border-radius: 0;
+  border: none
+}
+.form-commande-planty .form-info-livraison {
+  display: flex;
+  justify-content: space-between
+}
+.form-commande-planty .form-info-livraison > div {
+  margin-top: 40px
+}
+.form-commande-planty .form-info-livraison .form-info {
+  border-right: solid 1px var(--white);
+  padding-right: 45px;
+	margin-right: 45px
+}
+.form-commande-planty .form-info-livraison label {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24px;
+  color: var(--white);
+  margin: 20px 0 15px 0;
+  display: inline-block;
+}
+.form-commande-planty .form-info-livraison input {
+  height: 70px;
+  border-radius: 7px;
+  background-color: var(--white);
+  font-size: 18px;
+}
+.form-commande-planty .form-info-livraison h2{
+	margin-bottom: 10px
+}
+.form-commande-planty .form-info-livraison p {
+  margin: 0
+}
+.bt-commander{
+	text-align: center;
+	margin: 45px 0 80px 0
+}
+
 /*FOOTER*/
 footer nav ul li {
   text-align: center;
